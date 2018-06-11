@@ -12,8 +12,9 @@ var flkty = new Flickity( '.main-carousel', {
 
 
 var restartButton = document.querySelector('.restart-button');
-restartButton( 'click', function( event ) {
-  flkty.selectCell( 0);
+
+restartButton.addEventListener('click', function( event ) {
+  flkty.selectCell(0);
 });
 
 
