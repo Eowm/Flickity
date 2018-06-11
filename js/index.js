@@ -1,6 +1,5 @@
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
-  // options
   cellAlign: 'left',
   contain: true
 });
@@ -8,16 +7,14 @@ var flkty = new Flickity( elem, {
 // element argument can be a selector string
 //   for an individual element
 var flkty = new Flickity( '.main-carousel', {
-  fullscreen: true,
 });
 
 
 
 var restartButton = document.querySelector('.restart-button');
-viewFullscreenButton.addEventListener( 'click', function() {
-  flkty.viewFullscreen();
+restartButton( 'click', function( event ) {
+  flkty.selectCell( 0);
 });
-
 
 
 // vanilla JS
