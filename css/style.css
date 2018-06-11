@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 50%;
+  min-height: 250px;
+  margin-right: 10px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flickity-page-dots {
+  bottom: -22px;
+}
+
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
+
+.restart-button {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/*# sourceMappingURL=style.css.map */

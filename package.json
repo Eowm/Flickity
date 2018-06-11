@@ -36,7 +36,10 @@
   },
   "homepage": "https://github.com/Eowm/Stone-Paper-Scissors#readme",
   "dependencies": {
+    "flickity": "^2.1.1",
+    "flickity-hash": "^1.0.3",
     "mkdirp": "^0.5.1",
+    "normalize.css": "^8.0.0",
     "onchange": "^4.0.0"
   }
 }
