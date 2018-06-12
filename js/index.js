@@ -3,9 +3,10 @@ var templateList = document.getElementById('carousel-cell').innerHTML;
 
 var listItems = '';
 
-var templateItem = document.getElementById('template_item').innerHTML;
+var templateItem = document.getElementById('carousel-cell').innerHTML;
 
     Mustache.parse(templateItem);
+    
 for(var i = 0; i < carouselData.length; i++){
 		console.log(carouselData);
 		listItems += Mustache.render(templateList, carouselData[i]);
