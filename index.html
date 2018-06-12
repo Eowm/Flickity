@@ -56,9 +56,10 @@
   
     
 
-  <div class="main-carousel" data-flickity='{ "hash": true }' id="results">
+  <div class="main-carousel" data-flickity='{ "hash": true }'>
     <div class="container carousel-cell obrazek">
-      <div class="container">
+      <div class="container" id="carousel-cell">
+        <div id="results"></div>
         <script  type="x-tmpl-mustache" id="carousel-cell">
         <h1> {{title}} </h1>
         <img src={{image}}>
@@ -83,27 +84,27 @@
   var carouselData=[
   {
     title: 'Jeden',
-    image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
+    image: 'https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
   },
 {
     title: 'Jeden',
-    image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
+    image: 'https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
   },
   {
     title: 'Jeden',
-    image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
+    image: 'https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
   },
   {
     title: 'Jeden',
-    image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
+    image: 'https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
   },
   {
     title: 'Jeden',
-    image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
+    image: 'https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
   }
   ]
