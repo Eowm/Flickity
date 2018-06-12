@@ -9,7 +9,11 @@ for(var i = 0; i < carouselData.length; i++){
 		listItems += Mustache.render(templateItem, carouselData[i]);
 	}
 
+	var fullProductList = Mustache.render(templateList, {products: listItems});
+
 	results.insertAdjacentHTML('beforeend', fullProductList);
+
+
 
 
 var elem = document.querySelector('.main-carousel');
