@@ -1,3 +1,17 @@
+var templateList = document.getElementById('carousel-cell').innerHTML;
+
+
+var listItems = '';
+
+
+for(var i = 0; i < carouselData.length; i++){
+		console.log(carouselData);
+		listItems += Mustache.render(templateItem, carouselData[i]);
+	}
+
+	results.insertAdjacentHTML('beforeend', fullProductList);
+
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   cellAlign: 'left',

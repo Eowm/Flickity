@@ -19,7 +19,7 @@
 <body>
 	 	<p><button class="button restart-button">Return to begining</button></p>
 
-	<div class="main-carousel" data-flickity='{ "hash": true }'>
+	<!--<div class="main-carousel" data-flickity='{ "hash": true }'>
   		<div class="carousel-cell obrazek1" id="carousel-cell1">
   			<div class="container">
           <h1>Obrazek jeden</h1>
@@ -52,6 +52,18 @@
   		</div>
 	</div>
   <div class="progress-bar"></div>
+-->
+
+
+  <script class="main-carousel" data-flickity='{ "hash": true }' type="x-tmpl-mustache">
+    <div class="container carousel-cell obrazek" id="carousel-cell">
+      <div class="container">
+        <h1> {{title}} </h1>
+        <img src={{image}}>
+        {{description}}
+      </div>
+    </div>
+  </script>
 
   <p>
       View:
@@ -62,9 +74,39 @@
       <a href="#carousel-cell5">Cell 5</a>
   </p>
 
+  <script>
+  var carouselData=[
+  {
+    tittle: 'Jeden',
+    image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
+    description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+  },
+{
+    tittle: 'Jeden',
+    image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
+    description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+  },
+  {
+    tittle: 'Jeden',
+    image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
+    description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+  },
+  {
+    tittle: 'Jeden',
+    image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
+    description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+  },
+  {
+    tittle: 'Jeden',
+    image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
+    description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+  }
+  ]
+  </script>
 
-	
-	<script src="vendor/flickity.pkgd.min.js"></script>
+    
+	  <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="vendor/mustache.min.js"> </script> 
     <script  src="js/index.js"></script>
     <script type="vendor/hash.js"></script>
 
