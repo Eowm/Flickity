@@ -60,11 +60,9 @@
     <div class="container carousel-cell obrazek">
       <div class="container" id="carousel-cell">
         <div id="results"></div>
-        <script  type="x-tmpl-mustache" id="carousel-cell">
-        <h1> {{title}} </h1>
-        <img src={{image}}>
-        {{{description}}}
-      </script>
+        <script id="carousel-cell" type="x-tmpl-mustache">
+        {{{ products }}} {{{ description }}} {{{ title }}}
+         </script>
       </div>
     </div>
   </div>
@@ -110,10 +108,14 @@
   ]
   </script>
 
+ <!-- <h3>My Google Maps Demo</h3>
+    <div id="map"></div> -->
     
 	  <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/mustache.min.js"> </script> 
     <script  src="js/index.js"></script>
+   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvDeLSd5OzAZRrq6VT4rciRrLMjMPzamE&callback=initMap"></script>-->
+
     <script type="vendor/hash.js"></script>
 
 </body>
