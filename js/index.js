@@ -6,7 +6,7 @@ var listItems = '';
 var templateItem = document.getElementById('carousel-cell').innerHTML;
 
     Mustache.parse(templateItem);
-    
+
 for(var i = 0; i < carouselData.length; i++){
 		console.log(carouselData);
 		listItems += Mustache.render(templateList, carouselData[i]);
@@ -39,10 +39,10 @@ restartButton.addEventListener('click', function( event ) {
   flkty.selectCell(0);
 });
 
-var progressBar = document.querySelector('.progress-bar')
+//var progressBar = document.querySelector('.progress-bar')
 
-flkty.on( 'scroll', function( progress ) {
-  progress = Math.max( 0, Math.min( 1, progress ) );
-  progressBar.style.width = progress * 100 + '%';
-});
+//.on( 'scroll', function( progress ) {
+ // progress = Math.max( 0, Math.min( 1, progress ) );
+ // progressBar.style.width = progress * 100 + '%';
+//});
 
