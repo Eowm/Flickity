@@ -34,7 +34,7 @@
 })();
 
 
-var elem = document.querySelector('.main-carousel');
+var elem = document.querySelector('#results');
 var flkty = new Flickity( elem, {
   cellAlign: 'left',
   contain: true
