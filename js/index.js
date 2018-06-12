@@ -6,7 +6,7 @@ var listItems = '';
 
 for(var i = 0; i < carouselData.length; i++){
 		console.log(carouselData);
-		listItems += Mustache.render(carouselData[i]);
+		listItems += Mustache.render(templateList, carouselData[i]);
 	}
 
 	var fullProductList = Mustache.render(templateList, {products: listItems});
