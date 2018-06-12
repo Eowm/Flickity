@@ -54,16 +54,19 @@
   <div class="progress-bar"></div>
 -->
 
-
-  <div class="main-carousel" data-flickity='{ "hash": true }' type="x-tmpl-mustache">
-    <div class="container carousel-cell obrazek" id="carousel-cell">
+  <div class="main-carousel" data-flickity='{ "hash": true }'>
+    <div class="container carousel-cell obrazek">
       <div class="container">
+        <script  type="x-tmpl-mustache" id="carousel-cell">
         <h1> {{title}} </h1>
         <img src={{image}}>
-        {{description}}
+        {{{description}}}
+      </script>
       </div>
     </div>
   </div>
+
+
 
   <p>
       View:
@@ -79,27 +82,27 @@
   {
     tittle: 'Jeden',
     image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
-    description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+    description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
   },
 {
     tittle: 'Jeden',
     image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
-    description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+    description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
   },
   {
     tittle: 'Jeden',
     image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
-    description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+    description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
   },
   {
     tittle: 'Jeden',
     image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
-    description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+    description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
   },
   {
     tittle: 'Jeden',
     image: 'http://via.placeholder.com/400x200 alt="Photo placeholder"',
-    description: "<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>"
+    description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
   }
   ]
   </script>
