@@ -13,10 +13,15 @@ var flkty = new Flickity( '.main-carousel', {
 
 var restartButton = document.querySelector('.restart-button');
 
+
 restartButton.addEventListener('click', function( event ) {
   flkty.selectCell(0);
 });
 
+var progressBar = document.querySelector('.progress-bar')
 
-// vanilla JS
-//flkty.on( 'scroll', function( progress ) {...});
+flkty.on( 'scroll', function( progress ) {
+  progress = Math.max( 0, Math.min( 1, progress ) );
+  progressBar.style.width = progress * 100 + '%';
+});
+
