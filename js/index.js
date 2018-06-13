@@ -1,11 +1,11 @@
-ar restartButton = document.querySelector('.restart');
+var restartButton = document.querySelector('.restart');
 var progressBar = document.querySelector('.progress-bar')
 var templateSlide = document.getElementById('template-slide').innerHTML;
 var carouselContainer = document.querySelector('.carousel');
 var slide = ''
 
 restartButton.addEventListener( 'click', function() {
-  flkty.selectCell('#tempelhof');
+  flkty.selectCell('#AnfieldRoad');
 });
 
 Mustache.parse(templateSlide);
@@ -27,7 +27,7 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
-/*window.initMap = function() {
+window.initMap = function() {
 	var places = {
   uluru: {
     lat: -25.363, 
@@ -43,16 +43,17 @@ flkty.on( 'scroll', function( progress ) {
   }
 };
 	
-	var map = new google.maps.Map(document.getElementById('map'), {
+	/*	var map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 6,
 			center: places[i]
 		});
 
 	for (i=0; i <places.length; i++ ){
-		var marker[i] = new google.maps.Marker({
-			position: places[i];
+		var marker = new google.maps.Marker({
+			position: places[i],
 			map: map
 		})
+		var marker[i] = marker;
 		marker[i].addListener('click', function(){
 			infos.innerHTML = '"You clicked marker" + [i]';
 		})
@@ -80,6 +81,6 @@ flkty.on( 'scroll', function( progress ) {
 		});
 		markerThree.addListener('click', function(){
 			infos.innerHTML = 'You clicked markerThree';
-		});	 
+		});	 */
 	}	
-initMap();*/
+initMap();
