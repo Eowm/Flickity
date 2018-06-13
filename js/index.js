@@ -32,9 +32,10 @@
 	results.insertAdjacentHTML('beforeend', fullProductList);
 
 })();
-
-
 var elem = document.querySelector('#results');
+
+
+
 var flkty = new Flickity( elem, {
   cellAlign: 'left',
   contain: true
@@ -54,7 +55,7 @@ restartButton.addEventListener('click', function( event ) {
   flkty.selectCell(0);
 });
 
-//var progressBar = document.querySelector('.progress-bar')
+var progressBar = document.querySelector('.progress-bar')
 
 //.on( 'scroll', function( progress ) {
  // progress = Math.max( 0, Math.min( 1, progress ) );
