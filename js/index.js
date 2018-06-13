@@ -1,15 +1,4 @@
-//window.initMap = function() {
-//	var uluru = {lat: -25.363, lng: 131.044};
-//	var map = new google.maps.Map(document.getElementById('map'), {
-//			zoom: 4,
-//			center: uluru
-//		});
-//	var marker = new google.maps.Marker({
-//	position: uluru,
-//			map: map
-//		}); 
-//	}	
-//initMap();
+
 
 
 (function() {
@@ -56,6 +45,50 @@ restartButton.addEventListener('click', function( event ) {
 });
 
 var progressBar = document.querySelector('.progress-bar')
+
+/*window.initMap = function() {
+	var places = {uluru: (lat: -25.363, lng: 131.044), coords2: (lat: -25.363, lng: 134.044), coords3: (lat: -25.363, lng: 137.044)};
+	
+	var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 6,
+			center: places[i]
+		});
+
+	for (i=0; i <places.length; i++ ){
+		var marker[i] = new google.maps.Marker({
+			position: places[i];
+			map: map
+		})
+		marker[i].addListener('click', function(){
+			infos.innerHTML = '"You clicked marker" + [i]';
+		})
+	}
+
+	var markerOne = new google.maps.Marker({
+		position: uluru,
+			map: map
+		});
+		markerOne.addListener('click', function(){
+		infos.innerHTML = 'You clicked markerOne';
+		});	
+		
+	var markerTwo = new google.maps.Marker({
+			position: coords2,
+			map: map
+		});
+		markerTwo.addListener('click', function(){
+			infos.innerHTML = 'You clicked markerTwo';
+		});		
+		
+	var markerThree = new google.maps.Marker({
+			position: coords3,
+			map: map
+		});
+		markerThree.addListener('click', function(){
+			infos.innerHTML = 'You clicked markerThree';
+		});	 
+	}	
+initMap();*/
 
 //.on( 'scroll', function( progress ) {
  // progress = Math.max( 0, Math.min( 1, progress ) );

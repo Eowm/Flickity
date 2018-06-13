@@ -62,4 +62,10 @@
   height: 50vh !important;
 }
 
+#map {
+  margin: 0 auto;
+  height: 300px;
+  width: 600px;
+}
+
 /*# sourceMappingURL=style.css.map */
