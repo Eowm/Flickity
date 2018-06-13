@@ -59,4 +59,14 @@ body {
   background: rgba(0, 0, 0, 0.3);
 }
 
+#map {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

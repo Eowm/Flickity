@@ -28,59 +28,19 @@ flkty.on( 'scroll', function( progress ) {
 });
 
 window.initMap = function() {
-	var places = {
-  uluru: {
-    lat: -25.363, 
-    lng: 131.044
-   },
-  coords2: {
-    lat: -25.363, 
-    lng: 134.044
-  },
-  coords3: {
-    lat: -25.363, 
-    lng: 137.044
-  }
-};
 	
 		var map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 6,
-			center: places[i]
+			center: carouselData[0].cords
 		});
 
-	for (i=0; i <places.length; i++ ){
+	for (var i=0; i <carouselData.length; i++ ){
 		var marker = new google.maps.Marker({
-			position: places[i],
+			position: carouselData[i].cords,
 			map: map
 		})
-		var marker[i] = marker;
-		marker[i].addListener('click', function(){
-			infos.innerHTML = '"You clicked marker" + [i]';
+		marker.addListener('click', function(){
+			infos.innerHTML = '"You clicked marker"'+ carouselData[i].title ; //!!!!!!!!!!!!!!!1
 		})
 	}
-
-	/*var markerOne = new google.maps.Marker({
-		position: uluru,
-			map: map
-		});
-		markerOne.addListener('click', function(){
-		infos.innerHTML = 'You clicked markerOne';
-		});	
-		
-	var markerTwo = new google.maps.Marker({
-			position: coords2,
-			map: map
-		});
-		markerTwo.addListener('click', function(){
-			infos.innerHTML = 'You clicked markerTwo';
-		});		
-		
-	var markerThree = new google.maps.Marker({
-			position: coords3,
-			map: map
-		});
-		markerThree.addListener('click', function(){
-			infos.innerHTML = 'You clicked markerThree';
-		});	 */
-	}	
-initMap();
+}	
