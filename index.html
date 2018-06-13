@@ -1,127 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" >
-
-<head>
-  <meta charset="UTF-8">
-  <title>Flickity</title>
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="vendor/normalize.css">
-      <link rel="stylesheet" href="vendor/flickity.min.css">
-      <style> 
-         .obrazek1 {background-image:url("https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")}
-         .obrazek2 {background-image: url("https://images.pexels.com/photos/460715/pexels-photo-460715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")}
-         .obrazek3 {background-image: url("https://images.pexels.com/photos/841120/pexels-photo-841120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")}
-         .obrazek4 {background-image: url("https://images.pexels.com/photos/717501/pexels-photo-717501.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")}
-         .obrazek5 {background-image: url("https://images.pexels.com/photos/965196/pexels-photo-965196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")}
-    </style>
-</head>
-
-<body>
-    <p><button class="button restart-button">Return to begining</button></p>
-
-  <!--<div class="main-carousel" data-flickity='{ "hash": true }'>
-      <div class="carousel-cell obrazek1" id="carousel-cell1">
-        <div class="container">
-          <h1>Obrazek jeden</h1>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </div>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Plugins</title>
+    <link rel="stylesheet" href="vendor/normalize.css">
+    <link rel="stylesheet" href="vendor/flickity.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="carousel">
+      <button class="restart"><i class="fas fa-sync-alt"></i></button>
+      <script id="template-slide" type="x-tmpl-mustache">
+      <div class="carousel-cell" id="{{ id }}" style="background-image: url('{{ image }}')">
+        <div class="container">{{ title }}</div>
+        <div class="caption"{{{description}}}
       </div>
-      <div class="carousel-cell obrazek2" id="carousel-cell2">
-        <div class="container">
-          <h1>Obrazek dwa</h1>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </div>
-      </div>
-      <div class="carousel-cell obrazek3" id="carousel-cell3">
-        <div class="container">
-          <h1>Obrazek trzy</h1>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </div>
-      </div>
-      <div class="carousel-cell obrazek4" id="carousel-cell4">
-        <div class="container">
-          <h1>Obrazek cztery</h1>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </div>
-      </div>
-      <div class="carousel-cell obrazek5" id="carousel-cell5">
-        <div class="container">
-          <h1>Obrazek piec</h1>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </div>
-      </div>
-  </div>
-  
--->
-  
-    
-
-  <div class="main-carousel" data-flickity='{ "hash": true }'>
-      <div class="container">
-        <div class="carousel-cell">
-        <div id="results"></div>
-        <script id="carousel-cell" type="x-tmpl-mustache">
-        {{{ products }}}
-        <img class="obrazek" src={{image}}>
-        {{{ description }}} {{{ title }}}
-         </script>
-      </div>
+      </script>
     </div>
-  </div>
-
-
-
-  <p>
-      View:
-      <a href="#carousel-cell1">Cell 1</a>,
-      <a href="#carousel-cell2">Cell 2</a>,
-      <a href="#carousel-cell3">Cell 3</a>,
-      <a href="#carousel-cell4">Cell 4</a>,
-      <a href="#carousel-cell5">Cell 5</a>
-  </p>
-
-  <script>
-  var carouselData=[
-  {
-    title: 'Jeden',
-    image: 'https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    description: '<p>Lorem ipsum.</p>  <p>Dolor sit.</p>'
-  },
-{
-    title: 'Jeden',
-    image: 'https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    description: '<p>Lorem ipsum.</p>  <p>Dolor sit.</p>'
-  },
-  {
-    title: 'Jeden',
-    image: 'https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    description: '<p>Lorem ipsum.</p>  <p>Dolor sit.</p>'
-  },
-  {
-    title: 'Jeden',
-    image: 'https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    description: '<p>Lorem ipsum.</p>  <p>Dolor sit.</p>'
-  },
-  {
-    title: 'Jeden',
-    image: 'https://images.pexels.com/photos/188029/pexels-photo-188029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    description: '<p>Lorem ipsum.</p>  <p>Dolor sit.</p>'
-  }
-  ]
-  </script>
-
-
-<!--  <h3>My Google Maps Demo</h3>
-    <p id="infos"></p>
-    <div id="map"></div> -->
-
-    
-    <script src="vendor/flickity.pkgd.min.js"></script>
-    <script src="vendor/mustache.min.js"> </script> 
-    <script  src="js/index.js"></script>
+    <div class="progress-bar"></div>
+    <script>
+    var carouselData = [
+      {
+        id: 'tempelhof',
+        image: 'images/tempelhof.jpg', 
+        title: 'Tempelhof',
+        description: '<p>Tempelhof was one of the most important airports in the history of Germany. After its closure, it was reopened in 2010 and is currently the largest public park in Berlin.</p><a href=\'https://en.wikipedia.org/wiki/Berlin_Tempelhof_Airport\'>Wiki</a>'
+      },
+      {
+        id: 'betahaus',
+        image: 'images/betahaus.jpg', 
+        title: 'Betahaus',
+        description: '<p>Betahaus is a coworking space and community for people who want to work on their own projects while exchanging knowledge, ideas, and inspiration with others.</p><a href=\'https://www.betahaus.com/\'>Web</a>'
+      },
+      {
+        id: 'BK',
+        image: 'images/BK.jpg', 
+        title: 'BouldeKlub',
+        description: '<p>Willkommen im Klub, Berlin\'s Premier Bouldering Gym with state of the art walls, a cafe, training room and courses.</p><a href=\'https://www.facebook.com/boulderklubkreuzberg\'>Web</a>'
+      },
+      {
+        id: 'prinzessinnengarten',
+        image: 'images/prinzessinnengarten.jpg', 
+        title: 'Prinzessinnengarten',
+        description: '<p>The Prinzessinnengärten are a social and ecological urban agriculture on Moritzplatz in Berlin-Kreuzberg.</p><a href=\'http://prinzessinnengarten.net/\'>Web</a> '
+      },
+      {
+        id: 'tiergarten',
+        image: 'images/tiergarten.jpg', 
+        title: 'Tiergarten',
+        description: '<p>Berlin\'s Tiergarten is the equivalent of Central Park in New York or London\'s Hyde Park: the green lung of the metropolis.</p><a href=\'https://www.visitberlin.de/es/tiergarten\'>Web</a>'
+      }
+    ];
+    </script>
+    <!-- JavaScript -->
+    <script src="vendor/flickity.pkgd.min.js"></script> 
+    <script src="vendor/hash.js"></script> 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvDeLSd5OzAZRrq6VT4rciRrLMjMPzamE&callback=initMap"></script>
-
-    <script type="vendor/hash.js"></script>
-
-</body>
+    <script src="vendor/mustache.js"></script> 
+    <script src="js/script.js"></script> 
+  </body>
 </html>

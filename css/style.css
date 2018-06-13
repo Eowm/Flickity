@@ -1,74 +1,62 @@
 * {
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.carousel {
+  position: relative;
 }
 
 .carousel-cell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100%;
+  height: 50vh;
   min-height: 250px;
   margin-right: 10px;
-  text-align: center;
   background-size: cover;
   background-position: center;
-}
-
-.carousel-cell:before {
-  display: block;
   text-align: center;
-  line-height: 100px;
-  font-size: 80px;
-  color: white;
+  border-radius: 5px;
+  position: relative;
 }
 
-.container {
+.carousel-cell .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
+  display: inline-block;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.carousel-cell .caption {
+  background: rgba(179, 179, 179, 0.5);
+  width: 100%;
+  padding: 10px;
   text-align: center;
   color: white;
-}
-
-.flickity-page-dots {
-  bottom: -22px;
-}
-
-/* dots are lines */
-.flickity-page-dots .dot {
-  height: 4px;
-  width: 40px;
-  margin: 0;
-  border-radius: 0;
-}
-
-.restart-button {
   position: absolute;
-  top: 30px;
-  right: 20px;
-  cursor: pointer;
-  z-index: 2;
+  bottom: 0;
+}
+
+.restart {
+  /*dlaczego selektor button .restart nie dziala*/
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  padding: 2px 20px;
+  font-size: 26px;
+  color: white;
+  left: 10px;
+  top: 10px;
 }
 
 .progress-bar {
   height: 20px;
   width: 0;
-  background: #333;
-}
-
-.flickity-viewport {
-  width: 100vw !important;
-  height: 50vh !important;
-  background-size: cover !important;
-  background-position: center !important;
-}
-
-#map {
-  margin: 0 auto;
-  height: 300px;
-  width: 600px;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */
