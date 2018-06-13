@@ -59,7 +59,10 @@
 }
 
 .flickity-viewport {
+  width: 100vw !important;
   height: 50vh !important;
+  background-size: cover !important;
+  background-position: center !important;
 }
 
 #map {
