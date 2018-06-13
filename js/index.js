@@ -43,7 +43,7 @@ window.initMap = function() {
   }
 };
 	
-	/*	var map = new google.maps.Map(document.getElementById('map'), {
+		var map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 6,
 			center: places[i]
 		});
@@ -59,7 +59,7 @@ window.initMap = function() {
 		})
 	}
 
-	var markerOne = new google.maps.Marker({
+	/*var markerOne = new google.maps.Marker({
 		position: uluru,
 			map: map
 		});
