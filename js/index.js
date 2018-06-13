@@ -32,7 +32,7 @@
 	results.insertAdjacentHTML('beforeend', fullProductList);
 
 })();
-var elem = document.querySelector('#results');
+var elem = document.querySelector('#results');	
 
 
 

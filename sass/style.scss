@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+.flickity-enabled.is-draggable .flickity-viewport {
+height: 50vh !important;
+}
+
 .carousel-cell {
   display: flex;
   justify-content: center;
