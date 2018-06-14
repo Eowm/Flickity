@@ -5,8 +5,10 @@ var carouselContainer = document.querySelector('.carousel');
 var slide = ''
 
 restartButton.addEventListener( 'click', function() {
-  flkty.selectCell('#AnfieldRoad');
+  flkty.selectCell('#' + carouselData[0].id);
 });
+
+
 
 Mustache.parse(templateSlide);
 
@@ -27,20 +29,26 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
+
+flkty.on( 'change', function(index){	
+	map.panTo(carouselData[index].cords); 
+	map.setZoom(11);
+})
+
 window.initMap = function() {
 	
-		var map = new google.maps.Map(document.getElementById('map'), {
+		 map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 10,
 			center: carouselData[0].cords
 		});
 
-	for (var i=0; i <carouselData.length; i++ ){
-		var marker = new google.maps.Marker({
+	for (let i=0; i <carouselData.length; i++ ){
+			var marker = new google.maps.Marker({
 			position: carouselData[i].cords,
 			map: map
 		})
 		marker.addListener('click', function(){
-			infos.innerHTML = '"You clicked marker"'+ carouselData[i].title ; //!!!!!!!!!!!!!!!1
+			flkty.selectCell('#' + carouselData[i].id);
 		})
 	}
 }	
