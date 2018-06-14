@@ -30,7 +30,7 @@ flkty.on( 'scroll', function( progress ) {
 window.initMap = function() {
 	
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 6,
+			zoom: 10,
 			center: carouselData[0].cords
 		});
 
